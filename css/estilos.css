@@ -1,0 +1,28 @@
+@keyframes animacionTitulo {
+    /* 1. Ingresa desde la izquierda y avanza hacia la derecha hasta desaparecer */
+    0% { transform: translateX(-100%); opacity: 1; }
+    30% { transform: translateX(100vw); opacity: 1; }
+    
+    /* 2. Se prepara para entrar por la derecha sin que se vea */
+    31% { transform: translateX(100vw); opacity: 0; }
+    35% { transform: translateX(100vw); opacity: 1; }
+    
+    /* 3. Vuelve a ingresar por derecha, avanza a izquierda y desaparece */
+    65% { transform: translateX(-100%); opacity: 1; }
+    
+    /* 4. Se posiciona en su lugar final (margen izquierdo) y aparece */
+    66% { transform: translateX(-100%); opacity: 0; }
+    70% { transform: translateX(0); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Esta clase se la vamos a poner al <h1> */
+.titulo-animado {
+    display: inline-block;
+    animation: animacionTitulo 8s ease-in-out forwards;
+}
+
+/* Esto evita que aparezca una barra de scroll horizontal molesta mientras el texto vuela por la pantalla */
+.header-contenedor {
+    overflow-x: hidden;
+}
