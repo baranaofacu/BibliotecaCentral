@@ -49,19 +49,25 @@
             style="display: flex; transition: transform 0.5s ease"
           >
             <article class="tarjeta-libro">
-              <img src="imagenes/1984.jpg" class="imagen-libro" />
+              <a href="paginas-lbros/1984.html">
+                <img src="imagenes/1984.jpg" class="imagen-libro" />
+              </a>
               <h3 class="text-white font-sans font-bold m-0">1984</h3>
               <p class="text-gray-300 m-0">George Orwell</p>
             </article>
 
             <article class="tarjeta-libro">
-              <img src="imagenes/ElHobbit.jpg" class="imagen-libro" />
+              <a href="paginas-lbros/ElHobbit.html">
+                <img src="imagenes/ElHobbit.jpg" class="imagen-libro" />
+              </a>
               <h3 class="text-white font-sans font-bold m-0">El Hobbit</h3>
               <p class="text-gray-300 m-0">J.R.R. Tolkien</p>
             </article>
 
             <article class="tarjeta-libro">
-              <img src="imagenes/fahrenheit.jpg" class="imagen-libro" />
+              <a href="paginas-lbros/Fahrenheit451.html">
+                <img src="imagenes/fahrenheit.jpg" class="imagen-libro" />
+              </a>
               <h3 class="text-white font-sans font-bold m-0">Fahrenheit 451</h3>
               <p class="text-gray-300 m-0">Ray Bradbury</p>
             </article>
@@ -137,15 +143,36 @@
           <h3 class="titulo-seccion">Formulario de Consulta</h3>
 
           <label class="form-label">Nombre Completo:</label>
-          <input type="text" class="form-input"  pattern="[a-zA-Z\s]+" title="Solo letras" required placeholder="Tu nombre completo" />
-          <!-- <span id="error-nombre" class="text-red-600 text-sm font-bold hidden"></span>  usado en el script--> 
+          <input
+            type="text"
+            class="form-input"
+            pattern="[a-zA-Z\s]+"
+            title="Solo letras"
+            required
+            placeholder="Tu nombre completo"
+          />
+          <!-- <span id="error-nombre" class="text-red-600 text-sm font-bold hidden"></span>  usado en el script-->
 
           <label class="form-label">DNI:</label>
-          <input type="text" id="dni" class="form-input" min="3000000" max="70000000" placeholder="Tu DNI" required />
+          <input
+            type="text"
+            id="dni"
+            class="form-input"
+            min="3000000"
+            max="70000000"
+            placeholder="Tu DNI"
+            required
+          />
           <!-- <span id="error-dni" class="text-red-600 text-sm font-bold hidden"></span> -->
 
           <label class="form-label">Email:</label>
-          <input type="email" id="email" class="form-input" placeholder="tu@email.com" required />
+          <input
+            type="email"
+            id="email"
+            class="form-input"
+            placeholder="tu@email.com"
+            required
+          />
           <!-- <span id="error-email" class="text-red-600 text-sm font-bold hidden"></span> -->
 
           <label class="form-label">Fecha:</label>
@@ -159,7 +186,13 @@
           <!-- <span id="error-fecha" class="text-red-600 text-sm font-bold hidden"></span> -->
 
           <label class="form-label">Consulta:</label>
-          <textarea id="consulta" rows="4" class="form-input" placeholder="Tu consulta..." required></textarea>
+          <textarea
+            id="consulta"
+            rows="4"
+            class="form-input"
+            placeholder="Tu consulta..."
+            required
+          ></textarea>
 
           <button type="submit" id="btn-enviar" class="boton-consulta">
             Enviar Consulta

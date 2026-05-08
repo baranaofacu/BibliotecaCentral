@@ -30,8 +30,62 @@ if (boton && extra) {
   });
 }
 
+// 1. La Función Principal de construcción
+function agregarSocio(nombre, cargo) {
+  const contenedor = document.getElementById("contenedor-socios");
+
+  // El molde de tu tarjeta (tal cual tu diseño)
+  const tarjetaHTML = `
+        <article class="tarjeta-socio relative group">
+            <button class="boton-borrar" onclick="this.parentElement.remove()">X</button>
+            <div class="mx-auto flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-purple-200 text-4xl font-bold text-purple-700 sm:mx-0">
+                <img
+                    src="https://i.pinimg.com/originals/16/e3/16/16e31690d95888a1532ea992b8f3ddf4.jpg"
+                    alt="Foto de perfil"
+                    class="w-full h-full object-cover rounded-full"
+                />
+            </div>
+            <div class="space-y-2 text-center sm:text-left w-full">
+                <div class="space-y-0.5">
+                    <p class="text-lg font-semibold text-black">${nombre}</p>
+                    <p class="font-medium text-gray-500">${cargo}</p>
+                </div>
+                <a href="#" class="boton-mensaje">Mensaje</a>
+            </div>
+        </article>
+    `;
+
+  // La insertamos al principio de la grilla
+  contenedor.insertAdjacentHTML("beforeend", tarjetaHTML);
+}
+
+// 2. El "Escuchador" del botón
+document.addEventListener("DOMContentLoaded", () => {
+  const btnAgregar = document.getElementById("btn-agregar");
+  const formNuevo = document.getElementById("form-nuevo-socio");
+
+  if (btnAgregar) {
+    btnAgregar.addEventListener("click", () => {
+      const nombreInput = document.getElementById("nuevo-nombre");
+      const cargoInput = document.getElementById("nuevo-cargo");
+
+      // Validamos que no envíen vacío
+      if (nombreInput.value.trim() === "" || cargoInput.value.trim() === "") {
+        alert("Error, los campos no pueden estar vacios.");
+        return;
+      }
+
+      // LLAMAMOS A LA FUNCIÓN
+      agregarSocio(nombreInput.value, cargoInput.value);
+
+      // Limpiamos el form
+      formNuevo.reset();
+    });
+  }
+});
+
 /* 
-    logica comentada para complir con la actividad 5 del tp
+    Lógica comentada para complir con la actividad 5 del tp
 
 // --- LÓGICA DEL FORMULARIO ---
 const botonEnviar = document.getElementById("btn-enviar");

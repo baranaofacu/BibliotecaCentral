@@ -41,8 +41,18 @@
         </h2>
       </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <article class="tarjeta-socio">
+      <section class="bg-white p-6 rounded-lg shadow-md mb-12 border-t-4 border-blue-800">
+    <h3 class="text-xl font-bold mb-4 text-blue-900">Agregar Nuevo Socio</h3>
+    <form id="form-nuevo-socio" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <input type="text" id="nuevo-nombre" placeholder="Nombre y Apellido" class="form-input" required>
+      <input type="text" id="nuevo-cargo" placeholder="Socio # o Cargo" class="form-input" required>
+      <button type="button" id="btn-agregar" class="boton-consulta">Agregar Socio</button>
+    </form>
+  </section>
+
+      <div id="contenedor-socios" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="tarjeta-socio relative group">
+          <button class="boton-borrar" onclick="this.parentElement.remove()">X</button>
           <div
             class="mx-auto flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-purple-200 text-4xl font-bold text-purple-700 sm:mx-0"
           >
@@ -71,7 +81,8 @@
           </div>
         </article>
 
-        <article class="tarjeta-socio">
+        <article class="tarjeta-socio relative group">
+          <button class="boton-borrar" onclick="this.parentElement.remove()">X</button>
           <div
             class="mx-auto flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-purple-200 text-4xl font-bold text-purple-700 sm:mx-0"
           >
@@ -97,7 +108,8 @@
           </div>
         </article>
 
-        <article class="tarjeta-socio">
+        <article class="tarjeta-socio relative group">
+          <button class="boton-borrar" onclick="this.parentElement.remove()">X</button>
           <div
             class="mx-auto flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-purple-200 text-4xl font-bold text-purple-700 sm:mx-0"
           >
@@ -120,7 +132,8 @@
             >
           </div>
         </article>
-        <article class="tarjeta-socio">
+        <article class="tarjeta-socio relative group">
+          <button class="boton-borrar" onclick="this.parentElement.remove()">X</button>
           <div
             class="mx-auto flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-purple-200 text-4xl font-bold text-purple-700 sm:mx-0"
           >
@@ -144,7 +157,8 @@
             </a>
           </div>
         </article>
-        <article class="tarjeta-socio">
+        <article class="tarjeta-socio relative group">
+          <button class="boton-borrar" onclick="this.parentElement.remove()">X</button>
           <div
             class="mx-auto flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-purple-200 text-4xl font-bold text-purple-700 sm:mx-0"
           >
@@ -168,7 +182,8 @@
             </a>
           </div>
         </article>
-        <article class="tarjeta-socio">
+        <article class="tarjeta-socio relative group">
+          <button class="boton-borrar" onclick="this.parentElement.remove()">X</button>
           <div
             class="mx-auto flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-purple-200 text-4xl font-bold text-purple-700 sm:mx-0"
           >
@@ -208,5 +223,6 @@
         <p class="text-gray-300">📞 Teléfono: (385) 450-9500</p>
       </address>
     </footer>
+    <script src="scripts.js"></script>
   </body>
 </html>

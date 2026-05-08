@@ -25,7 +25,12 @@
 
   /* TARJETAS DE SOCIOS (Lo que se había perdido) */
   .tarjeta-socio {
-    @apply flex flex-col gap-2 p-6 sm:flex-row sm:items-center sm:gap-6 bg-white rounded-lg shadow-md cursor-pointer transition-transform duration-300 hover:-translate-y-1;
+    @apply relative flex flex-col gap-2 p-6 sm:flex-row sm:items-center sm:gap-6 bg-white rounded-lg shadow-md cursor-pointer transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  /* El botón de borrar para el Ejercicio 7 */
+  .boton-borrar {
+    @apply absolute top-2 right-2 bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md z-10;
   }
 
   /* TARJETAS DE LIBROS (Recuperando tu estilo visual) */
