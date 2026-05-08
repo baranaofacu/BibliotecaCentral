@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/estilos.css" />
     <link rel="icon" type="image/png" href="../imagenes/icono-biblioteca.png">
-    <title>Biblioteca - El Hobbit</title>
+    <title>Biblioteca - Fahrenheit 451</title>
   </head>
   <body class="bg-gray-300">
     <header class="bg-blue-900 text-white header-contenedor relative">
@@ -61,11 +61,30 @@
              por qué queman el conocimiento.
           </p>
 
+         <section class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-100">
+            <h3 class="text-lg font-bold mb-2">Datos Bibliométricos</h3>
+            <div class="text-gray-700 space-y-1">
+              <p><strong>ISBN-13:</strong> 978-8490620403</p>
+              <p><strong>Páginas:</strong> 176 páginas</p>
+
+              <div id="info-extra" class="hidden space-y-1">
+                <p><strong>Editorial:</strong> DeBolsillo</p>
+                <p><strong>Idioma:</strong> Español</p>
+                <p><strong>Peso:</strong> 200 g</p>
+              </div>
+
+              <button id="btn-leer-mas" class="text-blue-600 font-bold hover:underline mt-2">
+                Seguir leyendo...
+              </button>
+            </div>
+          </section>
+
           <div class="p-4 bg-red-50 border border-red-200 rounded-lg">
             <p class="text-red-800 font-bold">No disponible para préstamo</p>
           </div>
         </div>
       </section>
     </main>
+    <script src="../scripts.js"></script>
   </body>
 </html>

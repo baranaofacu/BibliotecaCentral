@@ -4,44 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/estilos.css" />
-    <link rel="icon" type="image/png" href="../imagenes/icono-biblioteca.png">
+    <link rel="icon" type="image/png" href="../imagenes/icono-biblioteca.png" />
     <title>Biblioteca - HTML and CSS</title>
   </head>
   <body class="bg-gray-300">
-    <header class="bg-blue-900 text-white header-contenedor relative">
+    <header class="bg-blue-900 text-white Header-antiScroll relative">
       <h1 class="text-3xl font-bold py-6 px-8">Biblioteca Central</h1>
     </header>
 
     <nav class="bg-blue-800 text-white font-bold shadow-md">
       <ul class="flex justify-start space-x-6 py-3 px-8">
-        <li><a href="../index.html" class="hover:text-blue-300">Inicio</a></li>
+        <li><a href="../index.html" class="barra-navegacion">Inicio</a></li>
         <li>
-          <a href="../libros.html" class="hover:text-blue-300"
+          <a href="../libros.html" class="barra-navegacion"
             >Listado de Libros</a
           >
         </li>
         <li>
-          <a href="../socios.html" class="hover:text-blue-300"
+          <a href="../socios.html" class="barra-navegacion"
             >Tarjetas de Socios</a
           >
         </li>
       </ul>
     </nav>
 
-    <main class="p-8 max-w-5xl mx-auto w-full mt-8">
+    <main class="p-8 max-w-5xl mx-auto w-full mt-4">
       <section
         class="bg-white p-8 rounded-xl shadow-lg flex flex-col md:flex-row gap-10"
       >
         <div class="w-full md:w-1/3">
           <img
             src="../imagenes/html&css.jpg"
-            alt="Portada del libro"
+            alt="Portada HTML and CSS Jon Duckett"
             class="w-full rounded-lg shadow-md border border-gray-200"
           />
         </div>
 
         <div class="flex-1">
-          <h2 class="text-4xl font-bold text-gray-900 mb-2">HTML and CSS: Design and Build Websites</h2>
+          <h2 class="text-4xl font-bold text-gray-900 mb-2">
+            HTML and CSS: Design and Build Websites
+          </h2>
           <p class="text-xl text-gray-600 mb-4 italic">Jon Duckett</p>
 
           <div class="flex items-center gap-2 mb-6">
@@ -50,21 +52,47 @@
               >4.7</span
             >
             <span class="text-gray-400">|</span>
-            <span class="text-gray-500">Programación</span>
+            <span class="text-gray-500 font-medium">Programación</span>
           </div>
 
-          <h3 class="text-xl font-bold border-b pb-2 mb-4">Sinopsis</h3>
-          <p class="text-gray-700 leading-relaxed mb-8">
-            Una guía moderna y visual que rompe con el formato tradicional de los libros de programación. 
-            Aprende a crear sitios web desde cero utilizando HTML para la estructura y CSS para el diseño. 
-            Ideal tanto para estudiantes que recién empiezan como para profesionales que quieren mejorar la estética de sus proyectos.
+          <h3 class="titulo-seccion">Sinopsis</h3>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            Una guía moderna y visual que rompe con el formato tradicional de
+            los libros de programación. Aprende a crear sitios web desde cero
+            utilizando HTML para la estructura y CSS para el diseño.
           </p>
 
+          <section
+            class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-100"
+          >
+            <h3 class="text-lg font-bold mb-2">Datos Bibliométricos</h3>
+            <div class="text-gray-700 space-y-1">
+              <p><strong>ISBN-13:</strong> 978-1118008188</p>
+              <p><strong>Páginas:</strong> 490 páginas</p>
+
+              <div id="info-extra" class="hidden space-y-1">
+                <p><strong>Editorial:</strong> John Wiley & Sons</p>
+                <p><strong>Idioma:</strong> Inglés</p>
+                <p><strong>Peso:</strong> 1.18 kg</p>
+              </div>
+
+              <button
+                id="btn-leer-mas"
+                class="text-blue-600 font-bold hover:underline mt-2 cursor-pointer"
+              >
+                Seguir leyendo...
+              </button>
+            </div>
+          </section>
+
           <div class="p-4 bg-green-50 border border-green-200 rounded-lg">
-            <p class="text-green-800 font-bold">Disponible para préstamo</p>
+            <p class="text-green-800 font-bold text-center md:text-left">
+              ✓ Disponible para préstamo
+            </p>
           </div>
         </div>
       </section>
     </main>
+    <script src="../scripts.js"></script>
   </body>
 </html>
